@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="styles/main.scss">
+  </head>
+  <body>
+
+    <div class="loader">
+      <div class="blinder-container">
+        <div class="blinder-top"></div>
+        <div class="blinder-bottom"></div>
+        <div class="blinder-top"></div>
+        <div class="blinder-bottom"></div>
+        <div class="blinder-top"></div>
+      </div>
+
+      <svg viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+          <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+              <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+
+        <mask id="mask0_1_10" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="85" height="85">
+        <circle cx="42.43" cy="42.43" r="42.43" fill="white"/>
+        </mask>
+        <g mask="url(#mask0_1_10)" filter="url(#goo)">
+        <circle cx="42.43" cy="42.43" r="40.43" stroke="white" stroke-width="4"/>
+        <circle cx="42" cy="-24.5303" r="45.845" fill="white"/>
+        <path class="drip-loader" d="M43.3509 -14.9321C43.0065 -15.7456 41.8536 -15.7456 41.5091 -14.9321L33.6285 3.68108C32.8018 5.14561 32.33 6.83714 32.33 8.63884C32.33 14.2169 36.8519 18.7388 42.43 18.7388C48.0081 18.7388 52.53 14.2169 52.53 8.63884C52.53 6.83717 52.0583 5.14568 51.2316 3.68117L43.3509 -14.9321Z" fill="white"/>
+        </g>
+      </svg>
+    </div>
+
+    <section>
+      <div class="mask">
+        <h1>Drip Loader.</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim labore reprehenderit incidunt laudantium eius magnam velit delectus? Id, corrupti vel?</p>
+      </div>
+    </section>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
